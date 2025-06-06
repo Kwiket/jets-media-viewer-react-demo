@@ -1,0 +1,44 @@
+:root {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide.swiper-slide-thumb-active > div {
+  opacity: 1 !important;
+}
+
+.swiper:not(.swiper-thumbs) {
+  padding-bottom: 30px;
+}
+
+.swiper.swiper-thumbs {
+  margin-bottom: 10px;
+}
+
+iframe {
+  border: none;
+}
