@@ -18,6 +18,16 @@ export interface JetsMediaViewerConfig {
   panoData?: PanoDataItem[];
   photoData?: PhotoDataItem[];
   title?: string;
+  pagination?: {
+    enabled: boolean;
+    activeBulletColor?: string;
+  };
+  navigation?: {
+    enabled: boolean;
+    leftIcon?: string;
+    rightIcon?: string;
+    color?: string;
+  };
   styles?: {
     modal?: {
       width?: number;
@@ -34,11 +44,12 @@ export interface JetsMediaViewerConfig {
       height?: number;
     };
   };
+  onClose?: () => void;
 }
 
-export type JMVSlideType = "photo" | "pano";
+export type JMVSlideType = 'photo' | 'pano';
 
 export const JMVSlideImageType = {
-  PHOTO: "photo" as JMVSlideType,
-  PANO: "pano" as JMVSlideType,
+  PHOTO: 'photo' as JMVSlideType,
+  PANO: 'pano' as JMVSlideType,
 } as const;

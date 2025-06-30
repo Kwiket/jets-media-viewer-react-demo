@@ -31,14 +31,32 @@ body {
   opacity: 1 !important;
 }
 
+.swiper-slide .slide-description {
+  margin: 5px 0;
+}
+
 .swiper:not(.swiper-thumbs) {
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 .swiper.swiper-thumbs {
   margin-bottom: 10px;
 }
 
+.swiper-pagination.swiper-pagination-bullets {
+  bottom: 50px;
+}
+
 iframe {
   border: none;
+}
+
+@media (max-width: 780px) {
+  .swiper:not(.swiper-thumbs) {
+    padding-bottom: 20px;
+  }
+
+  .swiper-slide .slide-description {
+    margin: 0;
+  }
 }
