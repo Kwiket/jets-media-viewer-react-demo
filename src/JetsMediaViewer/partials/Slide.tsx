@@ -20,12 +20,12 @@ export const JMVSlide: React.FC<IJMVSlideProps> = ({
 
   return (
     <div style={{ ...styles.slideContainer, ...style }}>
-      <div>
+      <div style={styles.imageWrapper}>
         <Image file={file} description={description} />
       </div>
 
-      <div style={styles.description}>
-        <p>{description}</p>
+      <div className="slide-description" style={styles.description}>
+        <p style={styles.descriptionText}>{description}</p>
       </div>
     </div>
   );
@@ -53,14 +53,25 @@ const styles = {
   description: {
     fontSize: 14,
     fontWeight: 400,
-    position: 'absolute' as const,
-    bottom: -25,
+  },
+  descriptionText: {
+    display: '-webkit-box',
+    '-webkit-line-clamp': 2,
+    '-webkit-box-orient': 'vertical',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    maxHeight: '40px',
   },
   slideContainer: {
     height: 420,
     display: 'flex',
     flexDirection: 'column' as const,
+  },
+  imageWrapper: {
     position: 'relative' as const,
+    minHeight: '95%',
+    width: '100%',
+    height: '100%',
   },
   slideImage: {
     height: '100%',

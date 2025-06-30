@@ -1,6 +1,8 @@
-export const JMVCloseButton: React.FC = () => {
+export const JMVCloseButton: React.FC<
+  React.ButtonHTMLAttributes<HTMLButtonElement>
+> = ({ onClick }) => {
   return (
-    <button style={styles.closeBtn} aria-label="Close">
+    <button style={styles.closeBtn} aria-label="Close" onClick={onClick}>
       <svg
         viewBox="0 0 20 20"
         height="16"

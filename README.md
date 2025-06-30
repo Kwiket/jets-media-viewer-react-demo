@@ -11,6 +11,7 @@ A modern, responsive React component for displaying photos and panoramas in a mo
 - Touch-friendly interface
 - Built with TypeScript for type safety
 - Uses Swiper.js for smooth sliding functionality
+- Customizable pagination and navigation controls
 
 ## Installation
 
@@ -23,28 +24,38 @@ npm install
 ## Usage
 
 ```tsx
-import JetsMediaViewer from "jets-media-viewer-react-demo";
+import JetsMediaViewer from 'jets-media-viewer-react-demo';
 
 const config = {
-  title: "Aircraft Gallery",
+  title: 'Aircraft Gallery',
   photoData: [
     {
-      file: "photo-url.jpg",
+      file: 'photo-url.jpg',
       size: { w: 1920, h: 1080 },
-      thumb: "thumb-url.jpg",
+      thumb: 'thumb-url.jpg',
       thumbSize: { w: 200, h: 150 },
-      description: "Center of Business class cabin. Left side",
+      description: 'Center of Business class cabin. Left side',
     },
   ],
   panoData: [
     {
-      file: "pano-url.html",
-      rawFile: "raw-url.jpg",
-      thumb: "pano-thumb-url.jpg",
+      file: 'pano-url.html',
+      rawFile: 'raw-url.jpg',
+      thumb: 'pano-thumb-url.jpg',
       thumbSize: { w: 200, h: 150 },
-      description: "360° panorama view",
+      description: '360° panorama view',
     },
   ],
+  pagination: {
+    enabled: true,
+    activeBulletColor: '#007bff',
+  },
+  navigation: {
+    enabled: true,
+    leftIcon: 'https://example.com/left-arrow.svg',
+    rightIcon: 'https://example.com/right-arrow.svg',
+    color: '#ffffff',
+  },
   styles: {
     modal: {
       width: 760,
@@ -59,6 +70,7 @@ const config = {
       height: 100,
     },
   },
+  onClose: () => console.log('Modal closed'),
 };
 
 function App() {
@@ -98,6 +110,24 @@ The component accepts a configuration object with the following properties:
   - `thumbSize`: Object containing `width` and `height` of the thumbnail
   - `description`: Panorama description/caption
 
+### `pagination` (optional)
+
+- Type: `object`
+- Description: Pagination configuration for slide indicators
+- Properties:
+  - `enabled`: Boolean to enable/disable pagination dots
+  - `activeBulletColor`: CSS color value for the active pagination bullet
+
+### `navigation` (optional)
+
+- Type: `object`
+- Description: Navigation configuration for previous/next buttons
+- Properties:
+  - `enabled`: Boolean to enable/disable navigation arrows
+  - `leftIcon`: URL of the custom left arrow icon (optional - shows default if not provided)
+  - `rightIcon`: URL of the custom right arrow icon (optional - shows default if not provided)
+  - `color`: CSS color value for navigation arrows (optional - works only with default navigation controls)
+
 ### `styles` (optional)
 
 - Type: `object`
@@ -114,6 +144,11 @@ The component accepts a configuration object with the following properties:
   - `thumbnails`: Thumbnail styles
     - `width`: Thumbnail width in pixels
     - `height`: Thumbnail height in pixels
+
+### `onClose` (optional)
+
+- Type: `() => void`
+- Description: Callback function called when the close button is clicked
 
 ## Development
 
