@@ -10,12 +10,7 @@ interface IJMVSlideProps {
   };
 }
 
-export const JMVSlide: React.FC<IJMVSlideProps> = ({
-  type,
-  file,
-  description,
-  style,
-}) => {
+export const JMVSlide: React.FC<IJMVSlideProps> = ({ type, file, description, style }) => {
   const Image = type === JMVSlideImageType.PHOTO ? JMVSlidePhoto : JMVSlidePano;
 
   return (
@@ -31,22 +26,12 @@ export const JMVSlide: React.FC<IJMVSlideProps> = ({
   );
 };
 
-const JMVSlidePhoto: React.FC<Omit<IJMVSlideProps, 'type'>> = ({
-  file,
-  description,
-}) => {
+const JMVSlidePhoto: React.FC<Omit<IJMVSlideProps, 'type'>> = ({ file, description }) => {
   return <img src={file} alt={description} style={styles.slideImage} />;
 };
 
 const JMVSlidePano: React.FC<Omit<IJMVSlideProps, 'type'>> = ({ file }) => {
-  return (
-    <iframe
-      src={file}
-      title="panorama iframe"
-      allow="fullscreen"
-      style={styles.slideImage}
-    />
-  );
+  return <iframe src={file} title="panorama iframe" allow="fullscreen" style={styles.slideImage} />;
 };
 
 const styles = {
@@ -77,7 +62,8 @@ const styles = {
     height: '100%',
     top: 0,
     left: 0,
-    objectFit: 'cover' as const,
+    objectFit: 'contain' as const,
+    objectPosition: 'center' as const,
     position: 'absolute' as const,
     width: '100%',
   },

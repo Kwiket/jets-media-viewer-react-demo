@@ -29,11 +29,17 @@ export interface JetsMediaViewerConfig {
     color?: string;
   };
   styles?: {
+    overlay?: {
+      backgroundColor?: string;
+      opacity?: number;
+    };
     modal?: {
       width?: number;
       height?: number;
       border?: string;
       borderRadius?: number;
+      padding?: number | string;
+      backgroundColor?: string;
     };
     slides?: {
       width?: number;

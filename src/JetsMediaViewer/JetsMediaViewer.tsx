@@ -1,13 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Thumbs, Pagination, Navigation } from 'swiper/modules';
 
-import {
-  JMVThumbnail,
-  JMVCloseButton,
-  JMVTitle,
-  JMVSlide,
-  JMVNavigation,
-} from './partials';
+import { JMVThumbnail, JMVCloseButton, JMVTitle, JMVSlide, JMVNavigation } from './partials';
 import type { JetsMediaViewerConfig, JMVSlideType } from './types';
 import { useJetsMediaViewer } from './hooks';
 
@@ -21,8 +15,7 @@ export interface JetsMediaViewerProps {
 }
 
 const JetsMediaViewer: React.FC<JetsMediaViewerProps> = ({ config }) => {
-  const { title, thumbsSwiper, slides, setThumbsSwiper } =
-    useJetsMediaViewer(config);
+  const { title, thumbsSwiper, slides, setThumbsSwiper } = useJetsMediaViewer(config);
 
   const computedStyles = {
     ...(config.pagination?.activeBulletColor && {
@@ -43,7 +36,7 @@ const JetsMediaViewer: React.FC<JetsMediaViewerProps> = ({ config }) => {
 
   return (
     <div style={styles.container}>
-      <div style={styles.overlay}></div>
+      <div style={{ ...styles.overlay, ...config.styles?.overlay }}></div>
 
       <div style={{ ...styles.content, ...config.styles?.modal }}>
         <JMVCloseButton onClick={config.onClose} />
@@ -52,8 +45,9 @@ const JetsMediaViewer: React.FC<JetsMediaViewerProps> = ({ config }) => {
 
         {/* Main Swiper */}
         <Swiper
-          spaceBetween={10}
+          spaceBetween={20}
           slidesPerView={1}
+          centeredSlides={true}
           thumbs={{ swiper: thumbsSwiper }}
           modules={[
             Thumbs,
@@ -80,7 +74,7 @@ const JetsMediaViewer: React.FC<JetsMediaViewerProps> = ({ config }) => {
               : false
           }
         >
-          {slides.map((slide) => (
+          {slides.map(slide => (
             <SwiperSlide key={slide.key + '-main'}>
               <JMVSlide
                 type={slide.type as JMVSlideType}
@@ -102,14 +96,8 @@ const JetsMediaViewer: React.FC<JetsMediaViewerProps> = ({ config }) => {
 
         {/* Thumbnails Swiper */}
         <div style={styles.thumbnails}>
-          <Swiper
-            spaceBetween={8}
-            slidesPerView={4}
-            watchSlidesProgress
-            onSwiper={setThumbsSwiper}
-            modules={[Thumbs]}
-          >
-            {slides.map((slide) => (
+          <Swiper spaceBetween={8} slidesPerView={5} watchSlidesProgress onSwiper={setThumbsSwiper} modules={[Thumbs]}>
+            {slides.map(slide => (
               <SwiperSlide key={slide.key + '-thumb'}>
                 <JMVThumbnail
                   thumb={slide.thumb}

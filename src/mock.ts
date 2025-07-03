@@ -1,18 +1,33 @@
-import type { JetsMediaViewerConfig } from "./JetsMediaViewer/types";
+import type { JetsMediaViewerConfig } from './JetsMediaViewer/types';
 
 export const exampleData: JetsMediaViewerConfig = {
-  title: "Emirates A380",
+  title: 'Emirates A380',
   styles: {
+    overlay: {
+      backgroundColor: 'gray',
+      opacity: 0.1,
+    },
     modal: {
-      width: 780,
-      borderRadius: 5,
+      width: 600,
+      height: 500,
+      borderRadius: 2,
+      padding: '15px 25px',
+      backgroundColor: 'rgba(255, 255, 255, 1)',
+    },
+    slides: {
+      width: 550,
+      height: 300,
+    },
+    thumbnails: {
+      width: 95,
+      height: 95,
     },
   },
   photoData: [
     {
-      file: "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-19.webp",
+      file: 'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-19.webp',
       thumb:
-        "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-19_thumb.webp",
+        'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-19_thumb.webp',
       size: {
         w: 700,
         h: 815,
@@ -21,12 +36,12 @@ export const exampleData: JetsMediaViewerConfig = {
         w: 219,
         h: 195,
       },
-      description: "Centre of Business class cabin. Left side. Window seat",
+      description: 'Centre of Business class cabin. Left side. Window seat',
     },
     {
-      file: "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-18.webp",
+      file: 'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-18.webp',
       thumb:
-        "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-18_thumb.webp",
+        'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-18_thumb.webp',
       size: {
         w: 700,
         h: 878,
@@ -35,12 +50,12 @@ export const exampleData: JetsMediaViewerConfig = {
         w: 219,
         h: 195,
       },
-      description: "Lounge/Bar. Central view.",
+      description: 'Lounge/Bar. Central view.',
     },
     {
-      file: "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-14.webp",
+      file: 'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-14.webp',
       thumb:
-        "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-14_thumb.webp",
+        'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-14_thumb.webp',
       size: {
         w: 700,
         h: 467,
@@ -49,12 +64,12 @@ export const exampleData: JetsMediaViewerConfig = {
         w: 219,
         h: 195,
       },
-      description: "Centre of Business class cabin. Left side. Window seat",
+      description: 'Centre of Business class cabin. Left side. Window seat',
     },
     {
-      file: "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-22.webp",
+      file: 'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-22.webp',
       thumb:
-        "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-22_thumb.webp",
+        'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-22_thumb.webp',
       size: {
         w: 700,
         h: 354,
@@ -63,12 +78,12 @@ export const exampleData: JetsMediaViewerConfig = {
         w: 219,
         h: 195,
       },
-      description: "Centre of Business class cabin. Storage. Window seat",
+      description: 'Centre of Business class cabin. Storage. Window seat',
     },
     {
-      file: "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-4.webp",
+      file: 'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-4.webp',
       thumb:
-        "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-4_thumb.webp",
+        'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-4_thumb.webp',
       size: {
         w: 700,
         h: 525,
@@ -77,12 +92,12 @@ export const exampleData: JetsMediaViewerConfig = {
         w: 219,
         h: 195,
       },
-      description: "Centre of Business class cabin. Right side.",
+      description: 'Centre of Business class cabin. Right side.',
     },
     {
-      file: "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-20.webp",
+      file: 'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-20.webp',
       thumb:
-        "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-20_thumb.webp",
+        'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-20_thumb.webp',
       size: {
         w: 700,
         h: 467,
@@ -91,12 +106,12 @@ export const exampleData: JetsMediaViewerConfig = {
         w: 219,
         h: 195,
       },
-      description: "Centre of Business class cabin. Left side. Window seat",
+      description: 'Centre of Business class cabin. Left side. Window seat',
     },
     {
-      file: "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-12.webp",
+      file: 'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-12.webp',
       thumb:
-        "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-12_thumb.webp",
+        'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-12_thumb.webp',
       size: {
         w: 700,
         h: 510,
@@ -105,12 +120,12 @@ export const exampleData: JetsMediaViewerConfig = {
         w: 219,
         h: 195,
       },
-      description: "Centre of Business class cabin. Power/USB. Aisle seat",
+      description: 'Centre of Business class cabin. Power/USB. Aisle seat',
     },
     {
-      file: "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-16.webp",
+      file: 'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-16.webp',
       thumb:
-        "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-16_thumb.webp",
+        'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-16_thumb.webp',
       size: {
         w: 700,
         h: 467,
@@ -119,13 +134,12 @@ export const exampleData: JetsMediaViewerConfig = {
         w: 219,
         h: 195,
       },
-      description:
-        "Centre of Business class cabin. In-flight Entertainment. Window seat",
+      description: 'Centre of Business class cabin. In-flight Entertainment. Window seat',
     },
     {
-      file: "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-13.webp",
+      file: 'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-13.webp',
       thumb:
-        "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-13_thumb.webp",
+        'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-13_thumb.webp',
       size: {
         w: 700,
         h: 843,
@@ -134,12 +148,12 @@ export const exampleData: JetsMediaViewerConfig = {
         w: 219,
         h: 195,
       },
-      description: "Centre of Business class cabin. Seat controls. Window seat",
+      description: 'Centre of Business class cabin. Seat controls. Window seat',
     },
     {
-      file: "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-21.webp",
+      file: 'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-21.webp',
       thumb:
-        "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-21_thumb.webp",
+        'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-21_thumb.webp',
       size: {
         w: 700,
         h: 467,
@@ -148,12 +162,12 @@ export const exampleData: JetsMediaViewerConfig = {
         w: 219,
         h: 195,
       },
-      description: "Centre of Business class cabin. Left side. Aisle seat",
+      description: 'Centre of Business class cabin. Left side. Aisle seat',
     },
     {
-      file: "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-15.webp",
+      file: 'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-15.webp',
       thumb:
-        "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-15_thumb.webp",
+        'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-15_thumb.webp',
       size: {
         w: 700,
         h: 482,
@@ -162,12 +176,12 @@ export const exampleData: JetsMediaViewerConfig = {
         w: 219,
         h: 195,
       },
-      description: "Centre of Business class cabin. Left side. Window seat",
+      description: 'Centre of Business class cabin. Left side. Window seat',
     },
     {
-      file: "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-17.webp",
+      file: 'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-17.webp',
       thumb:
-        "https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-17_thumb.webp",
+        'https://seatmaps.com/assets/photos-sandbox/fe87435d12ef7642af67d9bc82a8b3cd/B/emirates-airbus-a380-800-business-fe87435d12ef7642af67d9bc82a8b3cd-17_thumb.webp',
       size: {
         w: 700,
         h: 828,
@@ -176,46 +190,42 @@ export const exampleData: JetsMediaViewerConfig = {
         w: 219,
         h: 195,
       },
-      description: "Lounge/Bar. Right side.",
+      description: 'Lounge/Bar. Right side.',
     },
   ],
   panoData: [
     {
-      file: "https://seatmaps.com/viewer/?image=https://seatmaps.com/assets/pano-planes/9088c81433500db35304e5b543e30092_orig.jpg",
-      rawFile:
-        "https://seatmaps.com/assets/pano-planes/9088c81433500db35304e5b543e30092_orig.jpg",
-      thumb:
-        "https://seatmaps.com/img/screenshots/planes/aa6b7ad9d68bf3443c35d23de844463b/panorama_2.webp",
+      file: 'https://seatmaps.com/viewer/?image=https://seatmaps.com/assets/pano-planes/9088c81433500db35304e5b543e30092_orig.jpg',
+      rawFile: 'https://seatmaps.com/assets/pano-planes/9088c81433500db35304e5b543e30092_orig.jpg',
+      thumb: 'https://seatmaps.com/img/screenshots/planes/aa6b7ad9d68bf3443c35d23de844463b/panorama_2.webp',
       thumbSize: {
         w: 219,
         h: 195,
       },
-      description: "Emirates Airbus A380-800 V.3 seat maps 360 panorama view 2",
+      description: 'Emirates Airbus A380-800 V.3 seat maps 360 panorama view 2',
     },
     {
-      file: "https://seatmaps.com/viewer/?image=https://seatmaps.com/assets/pano-planes/80f84a998e900b2c948f22e31268d26e_orig.jpg",
-      rawFile:
-        "https://seatmaps.com/assets/pano-planes/80f84a998e900b2c948f22e31268d26e_orig.jpg",
-      thumb:
-        "https://seatmaps.com/img/screenshots/planes/aa6b7ad9d68bf3443c35d23de844463b/panorama_3.webp",
+      file: 'https://seatmaps.com/viewer/?image=https://seatmaps.com/assets/pano-planes/80f84a998e900b2c948f22e31268d26e_orig.jpg',
+      rawFile: 'https://seatmaps.com/assets/pano-planes/80f84a998e900b2c948f22e31268d26e_orig.jpg',
+      thumb: 'https://seatmaps.com/img/screenshots/planes/aa6b7ad9d68bf3443c35d23de844463b/panorama_3.webp',
       thumbSize: {
         w: 219,
         h: 195,
       },
-      description: "Emirates Airbus A380-800 V.3 seat maps 360 panorama view 3",
+      description: 'Emirates Airbus A380-800 V.3 seat maps 360 panorama view 3',
     },
   ],
   pagination: {
     enabled: true,
-    activeBulletColor: "red",
+    activeBulletColor: '#39c0ec',
   },
   navigation: {
     enabled: true,
     // leftIcon: 'https://panorama.quicket.io/icons/exit-left.svg',
     // rightIcon: 'https://panorama.quicket.io/icons/exit-right.svg',
-    color: "red",
+    color: '#39c0ec',
   },
   onClose: () => {
-    console.log("Close button clicked!");
+    console.log('Close button clicked!');
   },
 };

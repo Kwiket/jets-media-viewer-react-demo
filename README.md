@@ -133,11 +133,16 @@ The component accepts a configuration object with the following properties:
 - Type: `object`
 - Description: Custom styling options
 - Properties:
+  - `overlay`: {
+    - `backgroundColor`: Color of underlaying backgroung
+    - `opacity`: opacity level
   - `modal`: Modal container styles
     - `width`: Modal width in pixels
     - `height`: Modal height in pixels
     - `border`: Border CSS property
     - `borderRadius`: Border radius in pixels
+    - `padding`: Padding
+    - `backgroundColor`: Background color of modal
   - `slides`: Main slide styles
     - `width`: Slide width in pixels
     - `height`: Slide height in pixels
