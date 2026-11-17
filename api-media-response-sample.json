@@ -158,25 +158,24 @@
         }
     ],
     "panoData": [
-        {
-            "file": "https://seatmaps.com/viewer/?image=https://panorama.quicket.io/seatmaps-com/pano-planes/9088c81433500db35304e5b543e30092_orig.jpg",
-            "rawFile": "https://panorama.quicket.io/seatmaps-com/pano-planes/9088c81433500db35304e5b543e30092_orig.jpg",
-            "thumb": "https://seatmaps.com/img/screenshots/planes/aa6b7ad9d68bf3443c35d23de844463b/panorama_2.webp",
-            "thumbSize": {
-                "w": 219,
-                "h": 195
-            },
-            "description": "Emirates Airbus A380-800 V.3 seat maps 360 panorama view 2"
-        },
-        {
-            "file": "https://seatmaps.com/viewer/?image=https://panorama.quicket.io/seatmaps-com/pano-planes/80f84a998e900b2c948f22e31268d26e_orig.jpg",
-            "rawFile": "https://panorama.quicket.io/seatmaps-com/pano-planes/80f84a998e900b2c948f22e31268d26e_orig.jpg",
-            "thumb": "https://seatmaps.com/img/screenshots/planes/aa6b7ad9d68bf3443c35d23de844463b/panorama_3.webp",
-            "thumbSize": {
-                "w": 219,
-                "h": 195
-            },
-            "description": "Emirates Airbus A380-800 V.3 seat maps 360 panorama view 3"
-        }
-    ]
+    {
+      "file": "https://seatmaps.com/viewer/?image=https://seatmaps.com/assets/pano-planes/9088c81433500db35304e5b543e30092_orig.jpg",
+      "rawFile": "https://seatmaps.com/assets/pano-planes/9088c81433500db35304e5b543e30092_orig.jpg",
+      "thumb": "https://seatmaps.com/img/screenshots/planes/aa6b7ad9d68bf3443c35d23de844463b/panorama_2.webp",
+      "thumbSize": {
+        "w": 219,
+        "h": 195
+      },
+      "description": "Emirates Airbus A380-800 V.3 seat maps 360 panorama view 2"
+    },
+    {
+      "file": "https://seatmaps.com/viewer/?image=https://seatmaps.com/assets/pano-planes/80f84a998e900b2c948f22e31268d26e_orig.jpg",
+      "rawFile": "https://seatmaps.com/assets/pano-planes/80f84a998e900b2c948f22e31268d26e_orig.jpg",
+      "thumb": "https://seatmaps.com/img/screenshots/planes/aa6b7ad9d68bf3443c35d23de844463b/panorama_3.webp",
+      "thumbSize": {
+        "w": 219,
+        "h": 195
+      },
+      "description": "Emirates Airbus A380-800 V.3 seat maps 360 panorama view 3"
+    }
 }
